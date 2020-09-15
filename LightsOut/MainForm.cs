@@ -94,10 +94,7 @@ namespace LightsOut
 
 
             // Invert selected box and all surrounding boxes
-            for (int    i = r-1; i <= r+1; i++)
-                for (int    j = c-1; j <= c+1; j++)
-                    if   (i >= 0 && i < NumCells && j >= 0 && j < NumCells)
-                        grid[i,j] = !grid[i,j];
+            lightsOutGame.Move(r, c);
 
             // Redraw grid
             this.Invalidate();
