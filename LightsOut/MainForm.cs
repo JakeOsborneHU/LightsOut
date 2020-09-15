@@ -78,12 +78,7 @@ namespace LightsOut
 
         private bool PlayerWon()
         {
-            // Write the function code here
-            for (int i = 0; i < NumCells; ++i)
-                for (int j = 0; j < NumCells; ++j)
-                    if (grid[i, j])
-                        return false;
-            return true;
+            return lightsOutGame.IsGameOver();
         }
 
         private void MainForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
