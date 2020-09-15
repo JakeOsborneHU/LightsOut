@@ -54,7 +54,7 @@ namespace LightsOut
                     // grid section
                     Brush brush;
                     Pen pen;
-                    if (grid[r, c])
+                    if (lightsOutGame.GetGridValue(r, c))
                     {
                         pen = Pens.Black;
                         brush = Brushes.White;   // On
