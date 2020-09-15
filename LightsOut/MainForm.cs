@@ -35,9 +35,7 @@ namespace LightsOut
         private void button1_Click(object sender, EventArgs e)
         {
             // Fill grid with either white or black
-            for (int    r = 0; r < NumCells; r++)
-                for (int    c = 0; c < NumCells; c++)
-                    grid[r, c] = rand.Next(2) == 1;
+            lightsOutGame.NewGame();
 
             // Redraw grid
             this.Invalidate();
