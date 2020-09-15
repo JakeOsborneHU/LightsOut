@@ -114,18 +114,13 @@ namespace LightsOut
         private const int    NumCells = 3;       // Number of cells in grid
         private const int    CellLength = GridLength / NumCells;
 
-        private bool[,] grid;                  // Stores on/off state of cells in grid
-        private Random rand;           // Used to generate random numbers
+        LightsOutGame lightsOutGame;
 
         public MainForm()
         {
             InitializeComponent();
 
-            rand = new Random();    // Initializes random number generator 
-            grid = new bool[NumCells, NumCells];             // Turn entire grid on
-            for (int    r = 0; r < NumCells; r++)
-                for (int    c = 0; c < NumCells; c++)
-                    grid[r, c] = true;
+            lightsOutGame = new LightsOutGame();
         }
 
         private void gameToolStripMenuItem_Click(object sender, EventArgs e)
